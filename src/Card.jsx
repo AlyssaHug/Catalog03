@@ -1,21 +1,6 @@
 function Book({ book }) {
-    function remove(e) {
-        if (e.target === e.currentTarget) {
-            return;
-        }
-
-        if (e.target.tagName !== "SPAN") {
-            return;
-        }
-
-        e.currentTarget.remove();
-    }
     return (
-        <div
-            className='card'
-            onClick={remove}>
-            <span>Remove</span>
-
+        <div className='card'>
             <img
                 className='cardImg'
                 src={book.image}
