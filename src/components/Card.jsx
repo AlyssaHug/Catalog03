@@ -1,6 +1,24 @@
+import { useState } from "react";
+
 function Book({ book }) {
+    function remove(e) {
+        if (e.target === e.currentTarget) {
+            return;
+        }
+
+        if (e.target.tagName !== "SPAN") {
+            return;
+        }
+
+        e.currentTarget.remove();
+    }
+
     return (
-        <div className='card'>
+        <div
+            className='card'
+            onClick={remove}>
+            <span>Remove</span>
+
             <img
                 className='cardImg'
                 src={book.image}

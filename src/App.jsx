@@ -1,35 +1,24 @@
-import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import Button from "./components/Buttons";
-import Banner from "./components/Banner";
+import Footer from "./components/Footer";
 import Book from "./components/Card";
 import books from "../data/books.json";
+import Header from "./components/Header";
 
 function App() {
     function showBooks(book) {
         return <Book book={book} />;
     }
+
     return (
-        <body>
-            <main>
-                <div className='header'>
-                    <Banner text='Book Catalog'></Banner>
-                </div>
-                <div className='content'>
-                    <Button
-                        className='add'
-                        size='large'
-                        value='New'></Button>
-                    <div className='books'>{books.map(showBooks)}</div>
-                </div>
-                <div className='footer'>
-                    <Banner text='Alyssa Huggins, 2025'></Banner>
-                </div>
-                <div className='background'></div>
-            </main>
-        </body>
+        <main>
+            <Header />
+            <div className='content'>
+                <Button></Button>
+                <div className='books'>{books.map(showBooks)}</div>
+            </div>
+            <Footer text='Alyssa Huggins, 2025'></Footer>
+        </main>
     );
 }
 

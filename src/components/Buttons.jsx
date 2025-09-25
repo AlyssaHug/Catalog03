@@ -1,8 +1,15 @@
+import Modal from "./Modal";
+import BookForm from "./BookForm";
+
 function Button() {
     return (
-        <button className='button'>
-            <p>Add New Books!</p>
-        </button>
+        <div>
+            <Modal
+                btnClassName='button'
+                btnLabel='Add new books!'>
+                <BookForm />
+            </Modal>
+        </div>
     );
 }
 export default Button;
