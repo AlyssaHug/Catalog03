@@ -2,9 +2,9 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
-import Button from "./Buttons";
-import Banner from "./Banner";
-import Book from "./Card";
+import Button from "./components/Buttons";
+import Banner from "./components/Banner";
+import Book from "./components/Card";
 import books from "../data/books.json";
 
 function App() {
