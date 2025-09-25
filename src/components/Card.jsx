@@ -1,22 +1,20 @@
 import { useState } from "react";
 
 function Book({ book }) {
-    function remove(e) {
-        if (e.target === e.currentTarget) {
+    const [darkened, setDarkened] = useState(false);
+
+    function handleClick(e) {
+        if (e.target.tagName === "SPAN") {
+            e.currentTarget.remove();
             return;
         }
 
-        if (e.target.tagName !== "SPAN") {
-            return;
-        }
-
-        e.currentTarget.remove();
+        setDarkened((prev) => !prev);
     }
-
     return (
         <div
-            className='card'
-            onClick={remove}>
+            className={`card ${darkened ? "darkened" : ""}`}
+            onClick={handleClick}>
             <span>Remove</span>
 
             <img

@@ -83,7 +83,7 @@ a {
 .cardImg {
     max-width: 200px;
 }
-.card.selected {
+.card.darkened {
     background-color: #27293293;
 }
 /*====Form Styles====*/
