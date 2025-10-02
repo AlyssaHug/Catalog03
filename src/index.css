@@ -49,6 +49,7 @@
     border: 4px solid #272932;
     border-radius: 32px;
     text-align: center;
+    margin-bottom: 6px;
 }
 
 .bk-price {
@@ -56,6 +57,7 @@
     font-weight: 500;
     font-size: 16px;
     margin-top: 0;
+    margin-bottom: 4px;
 }
 .learn,
 a {
@@ -73,6 +75,15 @@ a {
 }
 .card.darkened {
     background-color: #27293293;
+}
+.remove {
+    color: #90a8c3;
+    background-color: #272932;
+    border-radius: 12px;
+    padding: 4px 8px;
+    position: absolute;
+    top: 4px;
+    right: 10px;
 }
 /*====Form Styles====*/
 

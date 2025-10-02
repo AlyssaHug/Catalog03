@@ -15,7 +15,7 @@ function Book({ book }) {
         <div
             className={`card ${darkened ? "darkened" : ""}`}
             onClick={handleClick}>
-            <span>Remove</span>
+            <span className='remove'>Remove</span>
 
             <img
                 className='cardImg'
